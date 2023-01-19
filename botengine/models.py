@@ -34,7 +34,7 @@ class BaseBotUser(Model):
     first_name: str
     last_name: str = None
     username: str = None
-    state: str = None
+    state: str = ''
     store: dict = None
     blocked: bool
     update_dt: datetime
