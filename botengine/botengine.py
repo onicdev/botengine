@@ -96,10 +96,10 @@ class BotEngine:
                 context.state = user.state
 
             await self.tree.process(update, context)
-
-            context.user.state = context.state
-            context.user.update_dt = datetime.utcnow()
-
-            await context.user.save_async()
+            context.user.update(
+                state=context.state,
+                store=context.user.store,
+                update_dt=datetime.utcnow(),
+            )
 
         return handle_update
