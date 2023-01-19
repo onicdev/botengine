@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "botengine"
+version = "4.0.0"
+description = ""
+authors = ["Vitaliy Grusha <vit.grusha@gmail.com>"]
+readme = "README.md"
+packages = [{include = "botengine"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+python-telegram-bot-raw = "^20.0"
+pydango = {git = "ssh://git@github.com/onicdev/pydango.git"}
+fastapi = "^0.89.1"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
+
+[tool.poetry.group.dev.dependencies]
+pylint = "^2.15.10"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
