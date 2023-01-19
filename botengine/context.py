@@ -79,7 +79,7 @@ class BaseContext(Generic[TemplateModel, InstanceModel, UserModel]):
         self._state = value
 
     @property
-    def is_output(self) -> dict:
+    def is_output(self) -> bool:
         return self._is_output
 
     @is_output.setter
@@ -88,27 +88,3 @@ class BaseContext(Generic[TemplateModel, InstanceModel, UserModel]):
             raise ValueError()
 
         self._is_output = value
-
-
-class ContextBuilder(Generic[TemplateModel, InstanceModel, UserModel]):
-
-    template_model: Type[TemplateModel]
-    instance_model: Type[InstanceModel]
-    user_model: Type[UserModel]
-
-    def __init__(
-        self,
-        template_model: TemplateModel,
-        instance_model: InstanceModel,
-        user_model: UserModel,
-    ):
-        self.template_model = template_model
-        self.instance_model = instance_model
-        self.user_model = user_model
-
-    def build(self):
-        context_class = BaseContext[TemplateModel, InstanceModel, UserModel]
-        context_class.template_model = self.template_model
-        context_class.instance_model = self.instance_model
-        context_class.user_model = self.user_model
-        return context_class
