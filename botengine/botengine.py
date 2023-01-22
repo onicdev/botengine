@@ -43,6 +43,11 @@ class BotEngine:
                 )
                 if len(updates) > 0:
                     for update in updates:
+                        instance = (
+                            await self._instance_model.query_single_required_async(
+                                {"_id": instance_id}
+                            )
+                        )
                         handle_update = await self.get_instance_update_handler(
                             instance, bot
                         )
