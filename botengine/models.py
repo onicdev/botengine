@@ -1,12 +1,13 @@
 from datetime import datetime
 from bson.objectid import ObjectId
+from pydantic import Field
 from pymongo import IndexModel, ASCENDING
 from pydango import Model, UndefinedConnection
 
 
 class BaseBotTemplate(Model):
 
-    data: dict = None
+    data: dict = Field(default_factory=dict)
     update_dt: datetime
     create_dt: datetime
 
@@ -18,7 +19,7 @@ class BaseBotTemplate(Model):
 class BaseBotInstance(Model):
 
     token: str
-    data: dict = None
+    data: dict = Field(default_factory=dict)
     update_dt: datetime
     create_dt: datetime
 
@@ -35,7 +36,7 @@ class BaseBotUser(Model):
     last_name: str = None
     username: str = None
     state: str = ""
-    store: dict = None
+    store: dict = Field(default_factory=dict)
     blocked: bool
     update_dt: datetime
     create_dt: datetime
