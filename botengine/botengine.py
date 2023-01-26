@@ -42,6 +42,7 @@ class BotEngine:
                     offset=self._polling_last_update_id, read_timeout=999
                 )
                 if len(updates) > 0:
+                    self._polling_last_update_id = updates[-1].update_id + 1
                     for update in updates:
                         instance = (
                             await self._instance_model.query_single_required_async(
@@ -52,7 +53,6 @@ class BotEngine:
                             instance, bot
                         )
                         await handle_update(update)
-                    self._polling_last_update_id = updates[-1].update_id + 1
                 time.sleep(0.2)
 
     async def process_webhook(self, instance_id: ObjectId, update_raw: dict) -> None:
