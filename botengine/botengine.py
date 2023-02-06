@@ -52,7 +52,10 @@ class BotEngine:
                         handle_update = await self.get_instance_update_handler(
                             instance, bot
                         )
-                        await handle_update(update)
+                        try:
+                            await handle_update(update)
+                        except Exception as e:
+                            print(e)
                 time.sleep(0.2)
 
     async def process_webhook(self, instance_id: ObjectId, update_raw: dict) -> None:
