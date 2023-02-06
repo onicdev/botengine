@@ -1,4 +1,5 @@
 import time
+import traceback
 from datetime import datetime
 from typing import Type, Callable
 from bson.objectid import ObjectId
@@ -54,8 +55,10 @@ class BotEngine:
                         )
                         try:
                             await handle_update(update)
-                        except Exception as e:
-                            print(e)
+                        except: # pylint: disable=bare-except
+                            print()
+                            traceback.print_exc()
+                            print()
                 time.sleep(0.2)
 
     async def process_webhook(self, instance_id: ObjectId, update_raw: dict) -> None:
