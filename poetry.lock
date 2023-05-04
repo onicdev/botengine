@@ -393,7 +393,7 @@ ujson = "^5.7.0"
 [package.source]
 type = "git"
 url = "ssh://git@github.com/onicdev/pydango.git"
-reference = "HEAD"
+reference = "f645ca704f9d46b8f745cbec8d88ea2effc091b3"
 resolved_reference = "f645ca704f9d46b8f745cbec8d88ea2effc091b3"
 
 [[package]]
@@ -1076,4 +1076,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "01b266bba87f4afa7bda228945484aa9f594e8ba706f53cbe24400638b4d3a1d"
+content-hash = "3dd83e1fafee839ce98bcf692c095c0ba4efcc385ec288fe6ba29e457246ec3e"
