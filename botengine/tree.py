@@ -36,7 +36,8 @@ class EngineTree:
             await tree_node(update, context)
         else:
             error_node = self.node_funcs.get("handle_error")
-            await error_node(update, context)
+            if error_node is not None:
+                await error_node(update, context)
 
     def node(
         self, func: Callable[[Update, BaseContext], None]
