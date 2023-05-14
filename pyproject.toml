@@ -9,7 +9,7 @@ packages = [{include = "botengine"}]
 [tool.poetry.dependencies]
 python = "^3.11"
 python-telegram-bot-raw = "^20.0"
-pydango = {git = "ssh://git@github.com/onicdev/pydango.git", rev = "929966b364e8507537ecee90e86aba2d715a9311"}
+pydango = {git = "ssh://git@github.com/onicdev/pydango.git", rev = "9b00d4fe324daa845fd6d6eb2ffa0435bcf6587e"}
 fastapi = "^0.89.1"
 uvicorn = {extras = ["standard"], version = "^0.20.0"}
 

@@ -23,14 +23,14 @@ trio = ["trio (>=0.16,<0.22)"]
 
 [[package]]
 name = "astroid"
-version = "2.15.4"
+version = "2.15.5"
 description = "An abstract syntax tree for Python with inference support."
 category = "dev"
 optional = false
 python-versions = ">=3.7.2"
 files = [
-    {file = "astroid-2.15.4-py3-none-any.whl", hash = "sha256:a1b8543ef9d36ea777194bc9b17f5f8678d2c56ee6a45b2c2f17eec96f242347"},
-    {file = "astroid-2.15.4.tar.gz", hash = "sha256:c81e1c7fbac615037744d067a9bb5f9aeb655edf59b63ee8b59585475d6f80d8"},
+    {file = "astroid-2.15.5-py3-none-any.whl", hash = "sha256:078e5212f9885fa85fbb0cf0101978a336190aadea6e13305409d099f71b2324"},
+    {file = "astroid-2.15.5.tar.gz", hash = "sha256:1039262575027b441137ab4a62a793a9b43defb42c32d5670f38686207cd780f"},
 ]
 
 [package.dependencies]
@@ -376,7 +376,7 @@ test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=7.3.1)", "pytest-
 
 [[package]]
 name = "pydango"
-version = "0.1.3.0"
+version = "0.1.3.1"
 description = ""
 category = "main"
 optional = false
@@ -393,8 +393,8 @@ ujson = "^5.7.0"
 [package.source]
 type = "git"
 url = "ssh://git@github.com/onicdev/pydango.git"
-reference = "929966b364e8507537ecee90e86aba2d715a9311"
-resolved_reference = "929966b364e8507537ecee90e86aba2d715a9311"
+reference = "9b00d4fe324daa845fd6d6eb2ffa0435bcf6587e"
+resolved_reference = "9b00d4fe324daa845fd6d6eb2ffa0435bcf6587e"
 
 [[package]]
 name = "pydantic"
@@ -1058,4 +1058,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "cb9c3755f39a1f9ecfac8083c7f222f17efc65a6a221b78f0b7e946e130e9e8c"
+content-hash = "b8bb725249a6e86147f29ad37e66ca67d99fba02a6db4d06b17c13e17569d707"
