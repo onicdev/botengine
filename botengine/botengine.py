@@ -119,8 +119,10 @@ class BotEngine:
             await self._user_model.update_one_async(
                 {"_id": user.id},
                 {
-                    "state": context.state,
-                    "update_dt": datetime.utcnow(),
+                    "$set": {
+                        "state": context.state,
+                        "update_dt": datetime.utcnow(),
+                    },
                 },
             )
 
