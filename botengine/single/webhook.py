@@ -12,9 +12,7 @@ def create_webhook_app(be: BotEngine, security_token: str):
     @app.post("/botengine/webhook/" + security_token)
     async def webhook(request: Request):
         request_json = await request.json()
-        asyncio.get_event_loop().create_task(
-            be.process_webhook(request_json)
-        )
+        asyncio.get_event_loop().create_task(be.process_webhook(request_json))
         return "ok"
 
     return app

@@ -12,7 +12,7 @@ class BaseBotUser(Model):
     username: str = None
     state: str = ""
     store: dict = Field(default_factory=dict)
-    blocked: bool
+    banned: bool
     update_dt: datetime
     create_dt: datetime
 

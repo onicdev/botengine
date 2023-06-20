@@ -6,7 +6,6 @@ from pydango import Model, UndefinedConnection
 
 
 class BaseBotTemplate(Model):
-
     data: dict = Field(default_factory=dict)
     update_dt: datetime
     create_dt: datetime
@@ -17,7 +16,6 @@ class BaseBotTemplate(Model):
 
 
 class BaseBotInstance(Model):
-
     token: str
     data: dict = Field(default_factory=dict)
     update_dt: datetime
@@ -37,7 +35,7 @@ class BaseBotUser(Model):
     username: str = None
     state: str = ""
     store: dict = Field(default_factory=dict)
-    blocked: bool
+    banned: bool
     update_dt: datetime
     create_dt: datetime
 
